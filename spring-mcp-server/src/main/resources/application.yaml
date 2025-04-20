@@ -1,12 +1,17 @@
+#logging:
+#  pattern:
+#    console:
+#spring:
+#  main:
+#    banner-mode: off
+#    web-application-type: none
+transport:
+  mode: sse
+
+
 logging:
-  pattern:
-    console:
-spring:
-  main:
-    banner-mode: off
-    web-application-type: none
-  ai:
-    mcp:
-      server:
-        name: mcp-server
-        version: 1.0.0
+  file:
+    name: mcp.demo.log
+
+server:
+  port: 8001
