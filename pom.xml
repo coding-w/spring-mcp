@@ -18,6 +18,7 @@
     <modules>
         <module>spring-mcp-server</module>
         <module>spring-ai</module>
+        <module>chain-workflow</module>
     </modules>
 
     <properties>
