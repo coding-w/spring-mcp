@@ -1,0 +1,35 @@
+spring:
+  ai:
+    openai:
+      api-key: sk-************
+#      api-key: sk-***********
+      base-url: https://api.deepseek.com
+#      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: deepseek-chat
+#          model: deepseek-v3
+    mcp:
+      client:
+        enabled: true
+        name: wx-demo
+        version: 1.0.0
+        type: sync
+        request-timeout: 20s
+        stdio:
+          servers-configuration: classpath:/mcp-server-config.json
+#          connections:
+#            demo:
+#              command: java
+#              args:
+#                - -Dspring.ai.mcp.server.stdio=true
+#                - -jar
+#                - /Users/wx/workspace/tvi/zz/spring-mcp/spring-mcp-server/target/spring-mcp-server.jar
+
+
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: debug
+        spec: debug

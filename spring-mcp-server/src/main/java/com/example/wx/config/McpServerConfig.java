@@ -9,7 +9,9 @@ import io.modelcontextprotocol.server.transport.WebFluxSseServerTransportProvide
 import io.modelcontextprotocol.spec.McpSchema;
 import io.modelcontextprotocol.spec.McpServerTransportProvider;
 import org.springframework.ai.mcp.McpToolUtils;
+import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.ToolCallbacks;
+import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -50,6 +52,11 @@ public class McpServerConfig {
     }
 
     @Bean
+    public ToolCallbackProvider weatherTools(ToolService toolService) {
+        return MethodToolCallbackProvider.builder().toolObjects(toolService).build();
+    }
+
+    @Bean
     public McpSyncServer mcpServer(McpServerTransportProvider transportProvider, ToolService toolService) { // @formatter:off
 
         // Configure server capabilities with resource support
@@ -58,14 +65,11 @@ public class McpServerConfig {
                 .logging() // Logging support
                 .build();
 
-        // Create the server with both tool and resource capabilities
-        // .serverInfo("计算器 Server", "1.0.0")
-        // Add @Tools
-
         return McpServer.sync(transportProvider)
                 .serverInfo("计算器 Server", "1.0.0")
                 .capabilities(capabilities)
                 .tools(McpToolUtils.toSyncToolSpecifications(ToolCallbacks.from(toolService))) // Add @Tools
+                .tools()
                 .build(); // @formatter:on
     } // @formatter:on
 }

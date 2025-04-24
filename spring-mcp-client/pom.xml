@@ -9,7 +9,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>chain-workflow</artifactId>
+    <artifactId>spring-mcp-client</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -26,13 +26,12 @@
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-openai</artifactId>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.ai</groupId>-->
-<!--            <artifactId>spring-ai-starter-model-anthropic</artifactId>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client</artifactId>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

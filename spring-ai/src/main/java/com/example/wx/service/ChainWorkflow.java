@@ -1,17 +1,14 @@
-package com.example.wx;
+package com.example.wx.service;
 
 import org.springframework.ai.chat.client.ChatClient;
-
-import javax.swing.*;
 
 /**
  * @author wangxiang
  * @description
- * @create 2025/4/21 22:22
+ * @create 2025/4/22 17:34
  */
 public class ChainWorkflow {
     private static final String[] DEFAULT_SYSTEM_PROMPTS = {
-
             // Step 1
             """
                 仅从文本中提取数值及其相关度量。
@@ -63,13 +60,11 @@ public class ChainWorkflow {
 
         for (String prompt : systemPrompts) {
 
-            // 1. Compose the input using the response from the previous step.
             String input = String.format("{%s}\n {%s}", prompt, response);
 
-            // 2. Call the chat client with the new input and get the new response.
             response = chatClient.prompt(input).call().content();
 
-            System.out.println(String.format("\nSTEP %s:\n %s", step++, response));
+            System.out.printf("\nSTEP %s:\n %s \n", step++, response);
         }
 
         return response;

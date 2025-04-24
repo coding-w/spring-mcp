@@ -6,7 +6,7 @@
 #    banner-mode: off
 #    web-application-type: none
 transport:
-  mode: sse
+  mode: stdio
 
 
 logging:
