@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "amap-maps": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@amap/amap-maps-mcp-server"
+      ],
+      "env": {
+        "AMAP_MAPS_API_KEY": "****"
+      },
+      "transportType": "stdio"
+    },
+    "amap": {
+      "autoApprove": [],
+      "disabled": true,
+      "timeout": 60,
+      "url": "https://mcp.amap.com/sse?key=32438c870c07791928585432a79eb5be",
+      "transportType": "sse"
+    },
+    "demo": {
+      "disabled": true,
+      "timeout": 60,
+      "command": "cmd",
+      "args": [
+        "/c",
+        "java",
+        "-jar",
+        "E:\\idea\\learn\\spring-mcp\\spring-mcp-server\\target\\spring-mcp-server.jar"
+      ],
+      "transportType": "stdio"
+    },
+    "calculator-server": {
+      "autoApprove": [],
+      "disabled": true,
+      "timeout": 60,
+      "url": "http://localhost:8001/sse",
+      "transportType": "sse"
+    }
+  }
+}
