@@ -25,11 +25,6 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-    // @Bean
-    // public ChatClient chatClient(ChatClient.Builder chatClientBuilder) {
-    //     return chatClientBuilder.defaultSystem("中文回答").build();
-    // }
-
     @Bean
     public CommandLineRunner predefinedQuestions(ChatClient.Builder chatClientBuilder, List<McpSyncClient> mcpSyncClients) {
         return args -> {

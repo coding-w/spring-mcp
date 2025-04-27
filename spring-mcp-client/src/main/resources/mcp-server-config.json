@@ -14,10 +14,11 @@
       "command": "java",
       "args": [
         "-Dspring.ai.mcp.server.stdio=true",
-        "-Dserver.port=8002",
+        "-Dserver.port=7002",
         "-Dspring.main.banner-mode=off",
         "-Dspring.main.web-application-type=none",
         "-Dlogging.pattern.console=",
+        "-Dtransport.mode=stdio",
         "-jar",
         "/Users/wx/workspace/tvi/zz/spring-mcp/spring-mcp-server/target/spring-mcp-server.jar"
       ],

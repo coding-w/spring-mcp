@@ -19,7 +19,7 @@
       "autoApprove": [],
       "disabled": true,
       "timeout": 60,
-      "url": "https://mcp.amap.com/sse?key=32438c870c07791928585432a79eb5be",
+      "url": "https://mcp.amap.com/sse?key=****",
       "transportType": "sse"
     },
     "demo": {
