@@ -1,14 +1,11 @@
 spring:
   ai:
     openai:
-      api-key: sk-19c6656c1afc4b448b44abb6980ac29c
-#      api-key: sk-98efae801c83476c817a0856266a5c5f
+      api-key: sk-***
       base-url: https://api.deepseek.com
-#      base-url: https://dashscope.aliyuncs.com/compatible-mode
       chat:
         options:
           model: deepseek-chat
-#          model: deepseek-v3
 
 logging:
   level:
