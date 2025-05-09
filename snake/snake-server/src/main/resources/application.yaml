@@ -1,0 +1,11 @@
+#logging:
+#  pattern:
+#    console:
+spring:
+  main:
+    banner-mode: off
+    web-application-type: none
+
+logging:
+  file:
+    name: mcp.snake.log

@@ -6,8 +6,8 @@
 #    banner-mode: off
 #    web-application-type: none
 transport:
-  mode: stdio
-#  mode: sse
+#  mode: stdio
+  mode: sse
 
 
 logging:
@@ -15,4 +15,4 @@ logging:
     name: mcp.demo.log
 
 server:
-  port: 8001
+  port: 8002

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "demo": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "java",
+        "-jar",
+        "E:\\idea\\learn\\spring-mcp\\spring-mcp-server\\target\\****"
+      ],
+      "env": {
+      }
+    }
+  }
+}

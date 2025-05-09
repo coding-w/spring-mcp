@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "snake-server": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dserver.port=8080",
+        "-Dspring.main.banner-mode=off",
+        "-Dlogging.pattern.console=",
+        "-jar",
+        "/Users/wx/workspace/tvi/zz/spring-mcp/snake/snake-server/target/snake-server.jar"
+      ],
+      "env": {
+      }
+    }
+  }
+}

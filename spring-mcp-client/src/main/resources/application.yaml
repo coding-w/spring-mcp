@@ -1,8 +1,8 @@
 spring:
   ai:
     openai:
-      api-key: sk-************
-#      api-key: sk-***********
+      api-key: sk-19c6656c1afc4b448b44abb6980ac29c
+#      api-key: sk-98efae801c83476c817a0856266a5c5f
       base-url: https://api.deepseek.com
 #      base-url: https://dashscope.aliyuncs.com/compatible-mode
       chat:
@@ -12,7 +12,7 @@ spring:
     mcp:
       client:
         enabled: true
-        name: wx-demo
+        name: demo
         version: 1.0.0
         type: sync
         request-timeout: 20s
@@ -33,3 +33,6 @@ logging:
       modelcontextprotocol:
         client: debug
         spec: debug
+
+server:
+  port: 7001

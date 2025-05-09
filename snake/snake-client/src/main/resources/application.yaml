@@ -1,0 +1,26 @@
+spring:
+  ai:
+    openai:
+      api-key: sk-***
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+    mcp:
+      client:
+        enabled: true
+        type: sync
+        request-timeout: 20s
+        stdio:
+          servers-configuration: classpath:/mcp-server-config.json
+
+
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: debug
+        spec: debug
+
+server:
+  port: 7001

@@ -52,7 +52,7 @@ public class McpServerConfig {
     }
 
     @Bean
-    public ToolCallbackProvider weatherTools(ToolService toolService) {
+    public ToolCallbackProvider serverTools(ToolService toolService) {
         return MethodToolCallbackProvider.builder().toolObjects(toolService).build();
     }
 
