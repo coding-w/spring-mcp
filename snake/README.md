@@ -751,13 +751,19 @@ public class SnakeClientApplication {
 🤖AI: 自动移动已激活！蛇将自动移动直到达到100分。游戏结束后会通知您。请稍候！
 ```
 
-该文是使用Java学习和应用MCP相关知识，源文章：
+该文是使用Java学习和应用MCP相关知识，源文章是**阿里云开发者**
+
+[MCP实战之Agent自主决策-让 AI玩转贪吃蛇](https://mp.weixin.qq.com/s/rVV6heKwIwz5krH8JtxUHA)
+
+
+该文章的源代码：https://github.com/coding-w/spring-mcp/tree/main/snake
 
 实践中的问题. 
 1. `web-application-type`类型问题，`WebSocket`和`SSE`默认只不一样，需要做兼容，本文采用的是`stdio`
     - `WebSocket` 默认是`SERVLET`
     - `SSE` 默认是`REACTIVE`
 2. Java MCP SDK 将调用方法都封装好了，中间交互过程没有源文章清洗，后续看看底层调用过程
+3. 贪吃蛇自动寻路的算法需要优化，会走到“死胡同”
 
 其他问题
 
