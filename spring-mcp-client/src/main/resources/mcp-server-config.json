@@ -14,7 +14,7 @@
       "command": "java",
       "args": [
         "-Dspring.ai.mcp.server.stdio=true",
-        "-Dserver.port=8080",
+        "-Dserver.port=8004",
         "-Dspring.main.banner-mode=off",
         "-Dlogging.pattern.console=",
         "-jar",
